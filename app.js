@@ -54,9 +54,9 @@ var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
                     'Atlanta',
                     'Chattanooga'];
 
-    if (myCities.indexOf('z') === -1){
+    if (myCities.indexOf(answerSix) === -1){
       console.log('Nope, never lived there.');
     } else {
-      (myCities.indexOf('') === 0, 1, 2)
-      console.log('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.');
+
+      console.log('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.')
     }
