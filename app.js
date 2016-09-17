@@ -1,4 +1,5 @@
-var userName = prompt('What\'s your name?');
+'use strict';
+var userName = prompt('What is your name')
 alert('Welcome to my site ' + userName);
 
 var answerOne = prompt('Was I born in Washington?').toLowerCase();
@@ -48,7 +49,7 @@ else if (answerFive >= 41) {
   alert('Get out of here with that!  I don\'t look that old!')
 }
 //Question Six Array
-var = answerSix = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
+var answerSix = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
 
 var myCities = ['cleveland',
                 'atlanta',
