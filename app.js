@@ -48,4 +48,15 @@ var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
     alert('Get out of here with that!  I don\'t look that old!')
   }
 //Question Six Array
-  var answerSix = prompt('Can you guess a city or a state that I have lived in prior to Seattle, WA?')
+  var = answerSix = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
+
+    var myCities = ['Cleveland',
+                    'Atlanta',
+                    'Chattanooga'];
+
+    if (myCities.indexOf('z') === -1){
+      console.log('Nope, never lived there.');
+    } else {
+      (myCities.indexOf('') === 0, 1, 2)
+      console.log('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.');
+    }
