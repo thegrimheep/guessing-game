@@ -3,7 +3,8 @@ body {
 
 }
 
-img .small {
-  width: 100px;
-  height: 100px;
+img {
+  height: 200px;
+  widht: 200px;
+
 }
