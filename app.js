@@ -39,10 +39,10 @@ if (answerFour === 'yes'  || answerFour === 'y') {
 //Question Five
 var answerFive = prompt('Guess how old I am.');
 
-if (answerFive <= 39){
+if (answerFive <= 39) {
   alert('You\'re too low!');
 }
-else if (answerFive === 40){
+else if (answerFive === 40) {
   alert('Wow! How\'d you guess that!')
 }
 else if (answerFive >= 41) {
