@@ -1,4 +1,5 @@
-var userName = prompt('What\'s your name?');
+'use strict';
+var userName = prompt('What is your name')
 alert('Welcome to my site ' + userName);
 
 var answerOne = prompt('Was I born in Washington?').toLowerCase();
@@ -38,17 +39,17 @@ if (answerFour === 'yes'  || answerFour === 'y') {
 //Question Five
 var answerFive = prompt('Guess how old I am.');
 
-if (answerFive <= 39){
+if (answerFive <= 39) {
   alert('You\'re too low!');
 }
-else if (answerFive === 40){
+else if (answerFive === 40) {
   alert('Wow! How\'d you guess that!')
 }
 else if (answerFive >= 41) {
   alert('Get out of here with that!  I don\'t look that old!')
 }
 //Question Six Array
-var = answerSix = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
+var answerSix = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
 
 var myCities = ['cleveland',
                 'atlanta',
@@ -59,4 +60,16 @@ if (myCities.indexOf(answerSix) === -1) {
 } else {
 
   alert('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.')
+}
+
+var answerSeven = prompt('Guess my shoe size.');
+
+if (answerSeven <= 13) {
+  alert('You are too low!');
+}
+else if (answerSeven === 14) {
+  alert('You got it rigth!!  Nice work!');
+  }
+else if (answerSeven >= 15) {
+  alert('You are too high')
 }
