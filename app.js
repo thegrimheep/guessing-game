@@ -61,3 +61,8 @@ if (myCities.indexOf(answerSix) === -1) {
 
   alert('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.')
 }
+
+var answerSeven = ('Guess my shoe size.') {
+  
+
+}
