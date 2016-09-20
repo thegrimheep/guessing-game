@@ -62,7 +62,14 @@ if (myCities.indexOf(answerSix) === -1) {
   alert('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.')
 }
 
-var answerSeven = ('Guess my shoe size.') {
-  
+var answerSeven = prompt('Guess my shoe size.');
 
+if (answerSeven <= 13) {
+  alert('You are too low!');
+}
+else if (answerSeven === 14) {
+  alert('You got it rigth!!  Nice work!');
+  }
+else if (answerSeven >= 15) {
+  alert('You are too high')
 }
