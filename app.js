@@ -48,7 +48,7 @@
 // else if (answerFive >= 41) {
 //   alert('Get out of here with that!  I don\'t look that old!')
 // }
-// //Question Six Array
+//Question Six Array
 // var answerSix = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
 //
 // var myCities = ['cleveland',
@@ -62,17 +62,27 @@
 //   alert('Yup, I have lived in Cleveland, Atlanta, and Chattanooga.')
 // }
 //
-// var answerSeven = prompt('Guess my shoe size.');
-//
-// if (answerSeven <= 13) {
-//   alert('You are too low!');
-// }
-// else if (answerSeven === 14) {
-//   alert('You got it rigth!!  Nice work!');
-//   }
-// else if (answerSeven >= 15) {
-//   alert('You are too high')
-// }
+var myCities = [
+  'cleveland',
+  'atlanta',
+  'chattanooga',
+  'augusta',
+  'johnson city'
+];
+
+function answerSix() {
+  var citiesResponse = prompt('Can you guess a city that I have lived in prior to Seattle, WA?').toLowerCase();
+  if (myCities.indexOf(citiesResponse) > -1) {
+    alert('Yes I have lived in ' + citiesResponse);
+  } else {
+    alert('Nope, never lived there.');
+    answerSix();
+  }
+}
+answerSix();
+
+
+
 function answerSeven() {
   var mySize = 14;
   var userResponse = parseInt(prompt('Guess my shoe size.'));
