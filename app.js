@@ -55,15 +55,32 @@ function answerFive() {
   console.log(ageGuess);
   if (ageGuess === 40) {
     alert('Wow!  How\'d you guess that!');
-  }  else if(ageGuess > myAge); {
-    alert('Get out of here with that!  I don\'t look that old!')
-  } else if (ageGuess < myAge); {
-    alert('Yeah, I know I look good but I\'m a little older.')
-  } else{
+  } else if (ageGuess > myAge) {
+    alert('Get out of here with that!  I don\'t look that old!');
+    answerFive();
+  } else if (ageGuess < myAge) {
+    alert('Yeah, I know I look good but I\'m a little older.');
+    answerFive();
+  } else {
     alert('Age is a number, so enter one.');
-    answerFive()
+    answerFive();
   }
 }
+answerFive();
+
+// if (userResponse === mySize) {
+//   alert('You got it right!! Nice work!');
+// } else if (userResponse > mySize) {
+//   alert('You are too high!');
+//   answerSeven();
+// } else if (userResponse < mySize) {
+//   alert('You are too low!');
+//   answerSeven();
+// } else {
+//   alert('Enter a number, dummy!');
+//   answerSeven();
+// }
+
 
 var myCities = [
   'cleveland',
