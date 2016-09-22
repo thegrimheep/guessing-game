@@ -37,16 +37,32 @@ if (answerFour === 'yes' || answerFour === 'y') {
   alert('Whatever, you would have won, I suck!');
 }
 //Question Five
-var answerFive = prompt('Guess how old I am.');
+// var answerFive = prompt('Guess how old I am.');
+//
+// if (answerFive <= 39) {
+//   alert('You\'re too low!');
+// }
+// else if (answerFive === 40) {
+//   alert('Wow! How\'d you guess that!');
+// }
+// else if (answerFive >= 41) {
+//   alert('Get out of here with that!  I don\'t look that old!');
+// }
 
-if (answerFive <= 39) {
-  alert('You\'re too low!');
-}
-else if (answerFive === 40) {
-  alert('Wow! How\'d you guess that!');
-}
-else if (answerFive >= 41) {
-  alert('Get out of here with that!  I don\'t look that old!');
+function answerFive() {
+  var ageGuess = parseInt(prompt('Guess how old I am.'));
+  var myAge = 40;
+  console.log(ageGuess);
+  if (ageGuess === 40) {
+    alert('Wow!  How\'d you guess that!');
+  }  else if(ageGuess > myAge); {
+    alert('Get out of here with that!  I don\'t look that old!')
+  } else if (ageGuess < myAge); {
+    alert('Yeah, I know I look good but I\'m a little older.')
+  } else{
+    alert('Age is a number, so enter one.');
+    answerFive()
+  }
 }
 
 var myCities = [
