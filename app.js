@@ -23,14 +23,26 @@ function answerOne() {
   }
 }
 answerOne();
-// var answerOne = prompt('Was I born in Washington?').toLowerCase();
-//
-// if (answerOne === 'no' || answerOne === 'n') {
-//   alert('Correct, I was born in Ohio!');
-// } else if (answerOne === 'yes' || answerOne === 'y') {
-//   alert('Not true, I was born in Ohio!');
-// } else {
-// }
+
+
+var learnMore = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
+
+function answerTwo() {
+  var userAnswer = prompt('Would you like to learn more about me?.').toLowerCase();
+  if (learnMore.indexOf(userAnswer) <= 1) {
+    alert('Great, please read on ' + userName);
+  } else if (learnMore.indexOf(userAnswer) >= 2) {
+    alert('That\'s cool, then please visit www.fu.com ' + userName);
+    answerTwo();
+  }
+}
+answerTwo();
+
 //
 // var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
 //
