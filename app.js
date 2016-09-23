@@ -35,7 +35,7 @@ var learnMore = [
 function answerTwo() {
   var userAnswer = prompt('Would you like to learn more about me?.').toLowerCase();
   if (learnMore.indexOf(userAnswer) <= 1) {
-    alert('Great, please read on ' + userName);
+    alert('Great, then please read on ' + userName);
   } else if (learnMore.indexOf(userAnswer) >= 2) {
     alert('That\'s cool, then please visit www.fu.com ' + userName);
     answerTwo();
@@ -43,23 +43,23 @@ function answerTwo() {
 }
 answerTwo();
 
-//
-// var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
-//
-// if (answerTwo === 'yes' || answerTwo === 'y') {
-//   alert('Great, please read on ' + userName);
-// } else if (answerTwo === 'no' || answerTwo === 'n') {
-//   alert('Sucks for you, I typed it all so you better read on.');
-// }
-//
-// var answerThree = prompt('Do you like my overused photo?').toLowerCase();
-//
-// if (answerThree === 'yes' || answerThree === 'y') {
-//   alert('Thank you very much.  How you doing??!!');
-// } else if (answerThree === 'no' || answerThree === 'n') {
-//   alert('That\'s cool, I don\'t really like it either.');
-// }
-//
+var sexyPhoto = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
+
+function answerThree() {
+  var userAnswer = prompt('Do you like my sexy overused photo?').toLowerCase();
+  if (sexyPhoto.indexOf(userAnswer) <= 1) {
+    alert('Thank you very much...  How you doing??!!');
+  } else if (sexyPhoto.indexOf(userAnswer) >= 2) {
+    alert('That\'s cool, I don\'t really like it either.')
+    answerThree();
+  }
+}
+answerThree();
 // var answerFour = prompt('Do you want to play some ping pong?').toLowerCase();
 //
 // if (answerFour === 'yes' || answerFour === 'y') {
