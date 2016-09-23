@@ -1,53 +1,63 @@
 'use strict';
+//questionOne
+
 var userName = prompt('What is your name');
-alert('Welcome to my site ' + userName);
+alert('Welcome to my site, ' + userName);
 
-var answerOne = prompt('Was I born in Washington?').toLowerCase();
+//Question One
 
-if (answerOne === 'no' || answerOne === 'n') {
-  alert('Correct, I was born in Ohio!');
-} else if (answerOne === 'yes' || answerOne === 'y') {
-  alert('Not true, I was born in Ohio!');
-} else {
+var yesOrNo = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
 
+function answerOne() {
+  var userAnswer = prompt('Was I born in Washington?').toLowerCase();
+  if (yesOrNo.indexOf(userAnswer) <= 1) {
+    alert('Not true, I was born in Ohio!');
+  } else if (yesOrNo.indexOf(userAnswer) >= 2) {
+    alert('Correct, I was born in Ohio!');
+    answerOne();
+  }
 }
-
-var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
-
-if (answerTwo === 'yes' || answerTwo === 'y') {
-  alert('Great, please read on ' + userName);
-} else if (answerTwo === 'no' || answerTwo === 'n') {
-  alert('Sucks for you, I typed it all so you better read on.');
-}
-
-var answerThree = prompt('Do you like my overused photo?').toLowerCase();
-
-if (answerThree === 'yes' || answerThree === 'y') {
-  alert('Thank you very much.  How you doing??!!');
-} else if (answerThree === 'no' || answerThree === 'n') {
-  alert('That\'s cool, I don\'t really like it either.');
-}
-
-var answerFour = prompt('Do you want to play some ping pong?').toLowerCase();
-
-if (answerFour === 'yes' || answerFour === 'y') {
-  alert('Meet me in 15 minutes near the kitchen.');
-
-} else if (answerFour === 'no' || answerFour === 'n') {
-  alert('Whatever, you would have won, I suck!');
-}
-//Question Five
-// var answerFive = prompt('Guess how old I am.');
+answerOne();
+// var answerOne = prompt('Was I born in Washington?').toLowerCase();
 //
-// if (answerFive <= 39) {
-//   alert('You\'re too low!');
+// if (answerOne === 'no' || answerOne === 'n') {
+//   alert('Correct, I was born in Ohio!');
+// } else if (answerOne === 'yes' || answerOne === 'y') {
+//   alert('Not true, I was born in Ohio!');
+// } else {
 // }
-// else if (answerFive === 40) {
-//   alert('Wow! How\'d you guess that!');
+//
+// var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
+//
+// if (answerTwo === 'yes' || answerTwo === 'y') {
+//   alert('Great, please read on ' + userName);
+// } else if (answerTwo === 'no' || answerTwo === 'n') {
+//   alert('Sucks for you, I typed it all so you better read on.');
 // }
-// else if (answerFive >= 41) {
-//   alert('Get out of here with that!  I don\'t look that old!');
+//
+// var answerThree = prompt('Do you like my overused photo?').toLowerCase();
+//
+// if (answerThree === 'yes' || answerThree === 'y') {
+//   alert('Thank you very much.  How you doing??!!');
+// } else if (answerThree === 'no' || answerThree === 'n') {
+//   alert('That\'s cool, I don\'t really like it either.');
 // }
+//
+// var answerFour = prompt('Do you want to play some ping pong?').toLowerCase();
+//
+// if (answerFour === 'yes' || answerFour === 'y') {
+//   alert('Meet me in 15 minutes near the kitchen.');
+//
+// } else if (answerFour === 'no' || answerFour === 'n') {
+//   alert('Whatever, you would have won, I suck!');
+// }
+
+//Question Five
 
 function answerFive() {
   var ageGuess = parseInt(prompt('Guess how old I am.'));
@@ -68,19 +78,7 @@ function answerFive() {
 }
 answerFive();
 
-// if (userResponse === mySize) {
-//   alert('You got it right!! Nice work!');
-// } else if (userResponse > mySize) {
-//   alert('You are too high!');
-//   answerSeven();
-// } else if (userResponse < mySize) {
-//   alert('You are too low!');
-//   answerSeven();
-// } else {
-//   alert('Enter a number, dummy!');
-//   answerSeven();
-// }
-
+//Question Six
 
 var myCities = [
   'cleveland',
@@ -101,7 +99,7 @@ function answerSix() {
 }
 answerSix();
 
-
+//Question Seven
 
 function answerSeven() {
   var mySize = 14;
