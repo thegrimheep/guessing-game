@@ -1,53 +1,110 @@
 'use strict';
+
 var userName = prompt('What is your name');
-alert('Welcome to my site ' + userName);
+alert('Welcome to my site, ' + userName);
 
-var answerOne = prompt('Was I born in Washington?').toLowerCase();
+//Question One
 
-if (answerOne === 'no' || answerOne === 'n') {
-  alert('Correct, I was born in Ohio!');
-} else if (answerOne === 'yes' || answerOne === 'y') {
-  alert('Not true, I was born in Ohio!');
-} else {
+var yesOrNo = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
 
+function answerOne() {
+  var userAnswer = prompt('Was I born in Washington?').toLowerCase();
+  if (yesOrNo.indexOf(userAnswer) <= 1) {
+    alert('Not true, I was born in Ohio!');
+  } else if (yesOrNo.indexOf(userAnswer) >= 2) {
+    alert('Correct, I was born in Ohio!');
+    answerOne();
+  }
 }
+answerOne();
 
-var answerTwo = prompt('Would you like to learn more about me?').toLowerCase();
+//Question Two
+var learnMore = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
 
-if (answerTwo === 'yes' || answerTwo === 'y') {
-  alert('Great, please read on ' + userName);
-} else if (answerTwo === 'no' || answerTwo === 'n') {
-  alert('Sucks for you, I typed it all so you better read on.');
+function answerTwo() {
+  var userAnswer = prompt('Would you like to learn more about me?.').toLowerCase();
+  if (learnMore.indexOf(userAnswer) <= 1) {
+    alert('Great, then please read on ' + userName);
+  } else if (learnMore.indexOf(userAnswer) >= 2) {
+    alert('That\'s cool, then please visit www.fu.com ' + userName);
+    answerTwo();
+  }
 }
+answerTwo();
 
-var answerThree = prompt('Do you like my overused photo?').toLowerCase();
+//Question Three
 
-if (answerThree === 'yes' || answerThree === 'y') {
-  alert('Thank you very much.  How you doing??!!');
-} else if (answerThree === 'no' || answerThree === 'n') {
-  alert('That\'s cool, I don\'t really like it either.');
+var sexyPhoto = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
+
+function answerThree() {
+  var userAnswer = prompt('Do you like my sexy overused photo?').toLowerCase();
+  if (sexyPhoto.indexOf(userAnswer) <= 1) {
+    alert('Thank you very much...  How you doing??!!');
+  } else if (sexyPhoto.indexOf(userAnswer) >= 2) {
+    alert('That\'s cool, I don\'t really like it either.');
+    answerThree();
+  }
 }
+answerThree();
 
-var answerFour = prompt('Do you want to play some ping pong?').toLowerCase();
+//Queastion Four
 
-if (answerFour === 'yes' || answerFour === 'y') {
-  alert('Meet me in 15 minutes near the kitchen.');
+var pingPong = [
+  'yes',
+  'y',
+  'no',
+  'n'
+];
 
-} else if (answerFour === 'no' || answerFour === 'n') {
-  alert('Whatever, you would have won, I suck!');
+function answerFour() {
+  var userAnswer = prompt('You wanna play some Ping Pong?').toLowerCase();
+  if (pingPong.indexOf(userAnswer) <= 1) {
+    alert('Meet me in 15 minutes near the kitchen.');
+  } else if (pingPong.indexOf(userAnswer) >= 2){
+    alert('Whatever, you would haev won becuase I suck.');
+    answerFour();
+  }
 }
+answerFour();
+
+
 //Question Five
-var answerFive = prompt('Guess how old I am.');
 
-if (answerFive <= 39) {
-  alert('You\'re too low!');
+function answerFive() {
+  var ageGuess = parseInt(prompt('Guess how old I am.'));
+  var myAge = 40;
+  console.log(ageGuess);
+  if (ageGuess === 40) {
+    alert('Wow!  How\'d you guess that!');
+  } else if (ageGuess > myAge) {
+    alert('Get out of here with that!  I don\'t look that old!');
+    answerFive();
+  } else if (ageGuess < myAge) {
+    alert('Yeah, I know I look good but I\'m a little older.');
+    answerFive();
+  } else {
+    alert('Age is a number, so enter one.');
+    answerFive();
+  }
 }
-else if (answerFive === 40) {
-  alert('Wow! How\'d you guess that!');
-}
-else if (answerFive >= 41) {
-  alert('Get out of here with that!  I don\'t look that old!');
-}
+answerFive();
+
+//Question Six
 
 var myCities = [
   'cleveland',
@@ -68,7 +125,7 @@ function answerSix() {
 }
 answerSix();
 
-
+//Question Seven
 
 function answerSeven() {
   var mySize = 14;
